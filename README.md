@@ -2,7 +2,7 @@
 
 一个支持在移动端使用IPFS服务节点的Flutter插件。目前仅支持Android端
 
-![Demo主页](img.png)
+![Demo主页](https://github.com/PsjNick/ipfs_server/raw/main/img.png)
 
 
 ## APIs
