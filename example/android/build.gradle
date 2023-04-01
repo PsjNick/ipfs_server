@@ -8,8 +8,6 @@ buildscript {
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
         maven { url "https://download.flutter.io" }
         google()
-        jcenter()//保持这个放在底部
-//        mavenCentral()
     }
 
     dependencies {
@@ -27,8 +25,11 @@ allprojects {
         maven { url 'https://maven.aliyun.com/repository/gradle-plugin'}
         maven { url "https://download.flutter.io" }
         google()
-        jcenter()//保持这个放在底部
-//        mavenCentral()
+
+        flatDir {
+            dirs project(":ipfs_server").file("libs")
+        }
+
     }
 }
 

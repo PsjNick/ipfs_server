@@ -55,6 +55,13 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+//    repositories {
+//        flatDir {
+//            dirs '../ipfs_server/libs', 'libs'
+//        }
+//    }
+
 }
 
 flutter {
@@ -62,5 +69,6 @@ flutter {
 }
 
 dependencies {
+//    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

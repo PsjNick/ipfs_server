@@ -4,6 +4,15 @@
 
 ![Demo主页](https://github.com/PsjNick/ipfs_server/raw/main/img.png)
 
+## Android
+
+在项目 build.gradle 文件下的 allprojects 下 repositories 下 加入<br><br>
+`flatDir {
+    dirs project(":ipfs_server").file("libs")
+}
+`
+
+
 
 ## APIs
 

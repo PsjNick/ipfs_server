@@ -1,8 +1,6 @@
 group 'com.psj.ipfs_server'
 version '1.0-SNAPSHOT'
 
-
-
 buildscript {
     ext.kotlin_version = '1.7.10'
     repositories {
@@ -53,10 +51,31 @@ android {
     defaultConfig {
         minSdkVersion 21
     }
-
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
 }
 
+
+
 dependencies {
+
+   implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'org.greenrobot:eventbus:3.1.1'
-    implementation project(':library')
+    implementation(name: 'library-release', ext: 'aar')
+
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.squareup.retrofit2:retrofit-converters:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit-adapters:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+
 }

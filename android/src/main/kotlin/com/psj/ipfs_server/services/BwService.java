@@ -38,9 +38,7 @@ public class BwService extends Service {
                 new IpfsBox().stats().bw(new Callback<Stats_bw>() {
                     @Override
                     public void onResponse(Call<Stats_bw> call, Response<Stats_bw> response) {
-
                         EventBus.getDefault().post(response.body());
-
                     }
 
                     @Override

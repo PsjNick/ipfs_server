@@ -1,8 +1,6 @@
 package com.psj.ipfs_server
 
-import android.content.ClipboardManager
 import android.content.Context
-import android.view.View
 import androidx.annotation.NonNull
 import com.psj.ipfs_server.services.CmdIntentService
 import com.psj.ipfs_server.utils.IpfsExec
